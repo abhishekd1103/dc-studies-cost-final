@@ -481,7 +481,7 @@ st.markdown("""
 <div class="main-header">
     <h1>Data Center Power System Studies- Cost Estimation</h1>
     <h2>PSS Studies Cost Estimation Platform</h2>
-    <p>Paramateric Cost Solution for Comprehensive Power Studies Analysis</p>
+    <p>Paramateric Cost EStimation Solution for Power System Studies Projects</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -495,11 +495,9 @@ st.markdown("""
 # Disclaimer
 st.markdown("""
 <div class="disclaimer-box">
-    <h4>Important Notice</h4>
-    <p><strong>Bus Count Estimation:</strong> This platform provides cost estimation for power system studies. 
-    Bus count calculations utilize industry-standard methodologies.</p>
-    <p><strong>Professional Application:</strong> Results represent engineering estimates based on established industry practices. 
-    Final validation by certified electrical engineers is recommended for project implementation.</p>
+    <h4>❗Important Note</h4>
+    <p><strong>Bus Count Estimation:</strong> This tool focuses on cost estimation for power system studies. Bus count calculations are handled by a separate specialized tool which will be integrated in future versions.</p>
+    <p><strong>Professional Application:</strong> Results are estimates based on industry standards. Always validate with qualified electrical engineers for actual project implementation.</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -1173,7 +1171,7 @@ st.markdown(f"""
         Developed by <strong>Abhishek Diwanji</strong> | Power Systems Studies Department
     </p>
     <p style="margin: 0; font-size: 0.9rem; color: #64748b;">
-    Cal-Version 4.1 | Enhanced with Reportings Cost/Custom Cost
+    Cal-Version 4.1 | Enhanced with Reportings Cost/Custom Cost-Typical Modeling
     </p>
     <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem; color: #475569;">
         Generated on: {current_time.strftime("%B %d, %Y at %I:%M %p IST")}
