@@ -400,16 +400,16 @@ if 'work_allocation' not in st.session_state:
 # Header
 st.markdown("""
 <div class="main-header">
-    <h1>Data Center Power System Studies</h1>
-    <h2>Professional Cost Estimation Platform</h2>
-    <p>Advanced Engineering Solution for Comprehensive Power Studies Analysis</p>
+    <h1>Data Center Power System Studies- Cost Estimation</h1>
+    <h2>PSS Studies Cost Estimation Platform</h2>
+    <p>Paramateric Cost Solution for Comprehensive Power Studies Analysis</p>
 </div>
 """, unsafe_allow_html=True)
 
 # Developer Credit
 st.markdown("""
 <div class="developer-credit">
-    Developed by <strong>Abhishek Diwanji</strong> | Power Systems Engineering Department
+    Developed by <strong>A.D</strong> | Power Systems Studies Department
 </div>
 """, unsafe_allow_html=True)
 
@@ -1091,10 +1091,10 @@ st.markdown(f"""
         Data Center Power System Studies - Professional Cost Estimation Platform
     </p>
     <p style="margin: 0.5rem 0; font-weight: 600; color: #06b6d4;">
-        Developed by <strong>Abhishek Diwanji</strong> | Power Systems Engineering Department
+        Developed by <strong>Abhishek Diwanji</strong> | Power Systems Studies Department
     </p>
     <p style="margin: 0; font-size: 0.9rem; color: #64748b;">
-        Professional Version 4.1 | Enhanced with ETAP Model Integration
+    Cal-Version 4.1 | Enhanced with Reportings Cost/Custom Cost
     </p>
     <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem; color: #475569;">
         Generated on: {current_time.strftime("%B %d, %Y at %I:%M %p IST")}
