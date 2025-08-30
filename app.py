@@ -378,7 +378,86 @@ st.markdown("""
         border-color: rgba(59, 130, 246, 0.4);
         transform: translateY(-2px);
     }
+    /* ✨ MIRROR GLASS EFFECT */
+.glass-effect {
+    position: fixed;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease;
+    opacity: 0;
+}
+
+.glass-effect.active {
+    opacity: 0.8;
+}
+
+/* ✨ RIPPLE CLICK EFFECT */
+@keyframes ripple {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(4); opacity: 0; }
+}
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.4);
+    transform: scale(0);
+    animation: ripple 0.6s ease-out;
+    pointer-events: none;
+    z-index: 9998;
+}
+
 </style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const glassEffect = document.createElement('div');
+    glassEffect.className = 'glass-effect';
+    document.body.appendChild(glassEffect);
+    
+    let mouseX = 0, mouseY = 0;
+    let glassX = 0, glassY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        glassEffect.classList.add('active');
+    });
+    
+    function animate() {
+        glassX += (mouseX - glassX) * 0.08;
+        glassY += (mouseY - glassY) * 0.08;
+        
+        glassEffect.style.left = (glassX - 90) + 'px';
+        glassEffect.style.top = (glassY - 90) + 'px';
+        
+        requestAnimationFrame(animate);
+    }
+    animate();
+    
+    document.addEventListener('click', (e) => {
+        const ripple = document.createElement('div');
+        ripple.className = 'ripple-effect';
+        ripple.style.left = (e.clientX - 20) + 'px';
+        ripple.style.top = (e.clientY - 20) + 'px';
+        ripple.style.width = '40px';
+        ripple.style.height = '40px';
+        
+        document.body.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+    });
+    
+    document.addEventListener('mouseleave', () => {
+        glassEffect.classList.remove('active');
+    });
+});
+</script>
+
 """, unsafe_allow_html=True)
 
 # Initialize session state
