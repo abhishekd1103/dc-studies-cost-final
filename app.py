@@ -481,7 +481,7 @@ st.markdown("""
 <div class="main-header">
     <h1>Data Center Power System Studies- Cost Estimation</h1>
     <h2>PSS Studies Cost Estimation Platform</h2>
-    <p>Paramateric Cost EStimation Solution for Power System Studies Projects</p>
+    <p>Paramateric Cost Estimation Solution for Power System Studies Projects</p>
 </div>
 """, unsafe_allow_html=True)
 
