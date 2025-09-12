@@ -716,9 +716,9 @@ with st.container():
     with report_col1:
         load_flow_report_cost = st.number_input("Load Flow Report Cost (₹)", min_value=0, max_value=50000, value=8000, step=500)
     with report_col2:
-        short_circuit_report_cost = st.number_input("Short Circuit Report Cost (₹)", min_value=0, max_value=50000, value=10000, step=500)
+        short_circuit_report_cost = st.number_input("Short Circuit Report Cost (₹)", min_value=0, max_value=100000, value=10000, step=500)
     with report_col3:
-        pdc_report_cost = st.number_input("PDC Report Cost (₹)", min_value=0, max_value=50000, value=15000, step=500)
+        pdc_report_cost = st.number_input("PDC Report Cost (₹)", min_value=0, max_value=100000, value=15000, step=500)
     with report_col4:
         arc_flash_report_cost = st.number_input("Arc Flash Report Cost (₹)", min_value=0, max_value=50000, value=12000, step=500)
 
